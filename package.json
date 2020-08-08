@@ -1,0 +1,23 @@
+{
+  "name": "kraftui",
+  "version": "1.0.0",
+  "description": "A UI style guide for light apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiztemple/kraftui.git"
+  },
+  "keywords": [
+    "UI",
+    "CSS"
+  ],
+  "author": "Sullivan Wisdom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wiztemple/kraftui/issues"
+  },
+  "homepage": "https://github.com/wiztemple/kraftui#readme"
+}
