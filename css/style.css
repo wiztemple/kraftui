@@ -405,9 +405,7 @@ ul {
 }
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.5; /* 2 */
 }
 
@@ -475,12 +473,16 @@ button,
 table {
   border-collapse: collapse;
 }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
 /*Navbar style*/
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  min-height: 70px;
+  min-height: 4.375rem;
   align-items: center;
   flex-wrap: wrap;
   background-color: #fff;
@@ -488,14 +490,16 @@ table {
 }
 
 .nav-brand {
+  height: 4.375rem;
   display: flex;
   align-items: center;
   flex-shrink: 0;
   margin-right: 2rem;
 }
 .nav-brand > a {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-decoration: none;
+  color: #444;
 }
 .nav-left,
 .nav-right {
@@ -509,18 +513,18 @@ table {
 }
 .nav-link,
 .nav-item {
-  height: 70px;
+  height: 4.375rem;
   display: flex;
   align-items: center;
   padding: 0 0.75rem;
 }
 .nav-mobile {
   width: 100vw;
-  height: 60px;
+  height: 4.375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 0.625rem;
   border-bottom: 1px solid rgba(238, 238, 238, 0.479);
 }
 .nav-menu-button {
@@ -540,7 +544,9 @@ table {
   text-decoration: none;
 }
 .nav-link:hover {
-  border-bottom: 2px solid dodgerblue;
+  color: #0f67be;
+  background-color: #0f66be09;
+  border-bottom: 2px solid #0f67be;
 }
 .nav-menu-hamburger {
   width: 1rem;
@@ -565,7 +571,7 @@ table {
 .box-6,
 .box-7 {
   width: 100%;
-  height: 50px;
+  height: 2.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -620,8 +626,8 @@ table {
 }
 /*utilities*/
 .mx-32 {
-  margin-right: 32px;
-  margin-left: 32px;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 /*grid*/
 .full-width {
@@ -679,6 +685,20 @@ table {
 }
 .col-12 {
   width: 100%;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  padding: 0 15px;
 }
 @media (min-width: 640px) {
   .container {
@@ -783,11 +803,29 @@ table {
   .md-col-12 {
     width: 100%;
   }
+  .md-col-1,
+  .md-col-2,
+  .md-col-3,
+  .md-col-4,
+  .md-col-5,
+  .md-col-6,
+  .md-col-7,
+  .md-col-8,
+  .md-col-9,
+  .md-col-10,
+  .md-col-11,
+  .md-col-12 {
+    padding: 0 20px;
+  }
   .md-full-width {
     width: 100%;
   }
   .md-full-screen {
     width: 100vw;
+  }
+  /*utilities*/
+  .md-mt-20 {
+    margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -796,12 +834,12 @@ table {
     margin: 0 auto;
   }
   .container-fluid {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 32px;
+    margin-right: 32px;
     max-width: none;
   }
   .nav-brand {
-    height: 70px;
+    height: 4.375rem;
   }
   .nav > .container-fluid {
     width: 100%;
@@ -827,7 +865,7 @@ table {
   .nav-link,
   .nav-item,
   .nav-brand {
-    height: 70px;
+    height: 4.375rem;
     display: flex;
     align-items: center;
   }
@@ -891,8 +929,11 @@ table {
   /*utilities*/
   /*utilities*/
   .lg-mx-32 {
-    margin-right: 32px;
-    margin-left: 32px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .lg-mt-20 {
+    margin-top: 20px;
   }
 }
 @media (min-width: 1280px) {
@@ -901,8 +942,8 @@ table {
     margin: 0 auto;
   }
   .container-fluid {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 2rem;
+    margin-right: 2rem;
     max-width: none;
   }
   .nav > .container-fluid {
