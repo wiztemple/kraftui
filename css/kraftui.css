@@ -41,9 +41,12 @@
 .icon-btn:focus {
   outline: none;
 }
-.icon-btn:hover {
+.icon-btn:hover:not(.active) {
   background-color: rgba(238, 238, 238, 0.308);
   overflow: hidden;
+}
+.icon-btn.active {
+  background-color: rgba(238, 238, 238, 0.308);
 }
 .icon-btn:first-child:hover {
   border-top-left-radius: 50px;
@@ -52,6 +55,12 @@
 .icon-btn:last-child:hover {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+.tab-body {
+  display: none;
+}
+.tab-body.active {
+  display: block;
 }
 .block-span {
   display: flex;
@@ -87,18 +96,36 @@
 .neutral:nth-child(1) {
   background: #171515;
 }
+.info:nth-child(1) {
+  background: #365bdf;
+}
+.info:nth-child(2) {
+  background: #365bdfe6;
+}
+.info:nth-child(3) {
+  background: #365bdfcc;
+}
 .neutral:nth-child(2) {
-  background: rgba(23, 21, 21, 0.9);
+  background: #171515e6;
 }
 .neutral:nth-child(3) {
-  background: rgba(23, 21, 21, 0.8);
+  background: #171515cc;
 }
 .card-colors:nth-child(2) > .neutral:nth-child(1) {
-  background: rgba(23, 21, 21, 0.7);
+  background: #171515b3;
 }
 .card-colors:nth-child(2) > .neutral:nth-child(2) {
-  background: rgba(23, 21, 21, 0.4);
+  background: #17151566;
 }
 .card-colors:nth-child(2) > .neutral:nth-child(3) {
-  background: rgba(23, 21, 21, 0.2);
+  background: #17151533;
+}
+.card-colors:nth-child(2) > .info:nth-child(1) {
+  background: #365bdfb3;
+}
+.card-colors:nth-child(2) > .info:nth-child(2) {
+  background: #365bdf99;
+}
+.card-colors:nth-child(2) > .info:nth-child(3) {
+  background: #365bdf66;
 }

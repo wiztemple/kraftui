@@ -25,38 +25,38 @@
           <div class="columns">
             <div class="lg-col-2">
               <div class="auto-tab">
-                <button class="icon-btn">
+                <button class="icon-btn active" data-target="Colors">
                   <img src="./icons/colors.svg" alt="color icon" />
                   <span class="block-span">Colors</span>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" data-target="Typography">
                   <span class="typography-font">Aa</span>
                   <div class="block-span">Typography</div>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" data-target="Cards">
                   <img src="./icons/cards.svg" alt="card icon" />
                   <span class="block-span">Cards</span>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" data-target="Button">
                   <img src="./icons/buttons.svg" alt="button icon" />
                   <span class="block-span">Button</span>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" data-target="Form">
                   <img src="./icons/forms.svg" alt="form icon" />
                   <span class="block-span">Form</span>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" data-target="Layout">
                   <img src="./icons/layout.svg" alt="layout icon" />
                   <span class="block-span">Layout</span>
                 </button>
-                <button class="icon-btn">
+                <button class="icon-btn" data-target="Icons">
                   <img src="./icons/icons.svg" alt="icons icon" />
                   <span class="block-span">Icons</span>
                 </button>
               </div>
             </div>
-            <div class="full-width lg-col-10">
-              <div class="tab-body">
+            <div class="full-width lg-col-10" id="tabContainer">
+              <div class="Colors tab-body active">
                 <div class="columns">
                   <div class="full-width md-col-3 md-mt-20">
                     <div class="color-card">
@@ -78,17 +78,17 @@
                   <div class="full-width md-col-3 md-mt-20">
                     <div class="color-card">
                       <div class="card-colors">
-                        <div class="card-colors-item neutral"></div>
-                        <div class="card-colors-item neutral"></div>
-                        <div class="card-colors-item neutral"></div>
+                        <div class="card-colors-item info"></div>
+                        <div class="card-colors-item info"></div>
+                        <div class="card-colors-item info"></div>
                       </div>
                       <div class="card-colors">
-                        <div class="card-colors-item neutral"></div>
-                        <div class="card-colors-item neutral"></div>
-                        <div class="card-colors-item neutral"></div>
+                        <div class="card-colors-item info"></div>
+                        <div class="card-colors-item info"></div>
+                        <div class="card-colors-item info"></div>
                       </div>
                       <div class="color-card-footer">
-                        Neutral
+                        Info
                       </div>
                     </div>
                   </div>
@@ -147,10 +147,17 @@
                   </div>
                 </div>
               </div>
+              <div class="Typography tab-body">Typography</div>
+              <div class="Cards tab-body">Cards</div>
+              <div class="Button Button tab-body">Buttons</div>
+              <div class="Form tab-body">Form</div>
+              <div class="Layout tab-body">Layout</div>
+              <div class="Icons tab-body">Icons</div>
             </div>
           </div>
         </div>
       </section>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
