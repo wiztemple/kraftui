@@ -1,27 +1,12 @@
-const tabs = document.querySelectorAll(".auto-tab");
-const tab = document.querySelectorAll(".icon-btn");
-const tabContent = document.querySelectorAll(".tab-body");
+// const tabs = document.querySelectorAll(".auto-tab");
+const tabs = document.querySelectorAll(".icon-btn");
+const tabContents = document.querySelectorAll(".tab-body");
 
-function onTabClick(event) {
-  // deactivate existing active tabs and panel
-
-  for (let i = 0; i < tab.length; i++) {
-    tab[i].classList.remove("active");
-  }
-
-  for (let i = 0; i < tabContent.length; i++) {
-    tabContent[i].classList.remove("active");
-  }
-
-  // activate new tabs and panel
-  event.target.classList.add("active");
-  let classString = event.target.getAttribute("data-target");
-  document
-    .getElementById("tabcontainer")
-    .getElementsByClassName(classString)[0]
-    .classList.add("active");
-}
-
-for (let i = 0; i < tab.length; i++) {
-  tab[i].addEventListener("click", onTabClick, false);
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener("click", () => {
+    for (let i = 0; i < tabContents.length; i++) {
+      tabContents[i].className = "tab-body";
+    }
+    document.getElementById(this.dataset.id).className = "tab-body active";
+  });
 }
